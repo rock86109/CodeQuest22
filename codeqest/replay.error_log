@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/Users/danny/miniforge3/envs/codeq/lib/python3.8/site-packages/codequest22/visual/game.py", line 168, in run_visual
+    arcade.run()
+  File "/Users/danny/miniforge3/envs/codeq/lib/python3.8/site-packages/arcade/window_commands.py", line 242, in run
+    pyglet.app.run()
+  File "/Users/danny/miniforge3/envs/codeq/lib/python3.8/site-packages/pyglet/app/__init__.py", line 107, in run
+    event_loop.run(interval)
+  File "/Users/danny/miniforge3/envs/codeq/lib/python3.8/site-packages/pyglet/app/base.py", line 184, in run
+    timeout = self.idle()
+  File "/Users/danny/miniforge3/envs/codeq/lib/python3.8/site-packages/pyglet/app/base.py", line 245, in idle
+    self.clock.call_scheduled_functions(dt)
+  File "/Users/danny/miniforge3/envs/codeq/lib/python3.8/site-packages/pyglet/clock.py", line 275, in call_scheduled_functions
+    item.func(now - item.last_ts, *item.args, **item.kwargs)
+  File "/Users/danny/miniforge3/envs/codeq/lib/python3.8/site-packages/arcade/application.py", line 292, in _dispatch_updates
+    self.dispatch_event('on_update', delta_time)
+  File "/Users/danny/miniforge3/envs/codeq/lib/python3.8/site-packages/pyglet/window/__init__.py", line 1327, in dispatch_event
+    super().dispatch_event(*args)
+  File "/Users/danny/miniforge3/envs/codeq/lib/python3.8/site-packages/pyglet/event.py", line 422, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "/Users/danny/miniforge3/envs/codeq/lib/python3.8/site-packages/codequest22/visual/screen.py", line 708, in on_update
+    GameStateHandler.tick(delta_time)
+  File "/Users/danny/miniforge3/envs/codeq/lib/python3.8/site-packages/codequest22/visual/game.py", line 67, in tick
+    cls.sm.initPlayers(res["images"])
+  File "/Users/danny/miniforge3/envs/codeq/lib/python3.8/site-packages/codequest22/visual/screen.py", line 552, in initPlayers
+    hill = arcade.Sprite(f(f"sprites/{names[x]}-base.png"),
+IndexError: list index out of range
